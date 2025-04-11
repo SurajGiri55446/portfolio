@@ -31,3 +31,10 @@
 html {
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
+.dark #menu-toggle {
+    background-color: #1e293b; /* Dark mode background */
+    border-radius: 8px; /* Optional rounded corners */
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
