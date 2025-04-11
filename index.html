@@ -119,10 +119,23 @@
       html {
         scroll-behavior: smooth;
       }
+
+      /* Fixed light mode text colors */
+      .text-gray-300:not(.dark .text-gray-300) {
+        color: rgba(75, 85, 99, 1);
+      }
+      .text-gray-700:not(.dark .text-gray-700) {
+        color: rgba(55, 65, 81, 1);
+      }
+      .text-gray-500:not(.dark .text-gray-500) {
+        color: rgba(107, 114, 128, 1);
+      }
+      .text-gray-400:not(.dark .text-gray-400) {
+        color: rgba(156, 163, 175, 1);
+      }
     </style>
   </head>
   <body class="transition-colors duration-300">
-    <p></p>
     <div id="root">
       <div
         class="fixed top-0 right-0 w-[500px] h-[300px] -z-10 translate-y-[-80%] dark:hidden"
@@ -134,7 +147,7 @@
         />
       </div>
     </div>
-    <!-- hewrjerh jfdsjfhds fdf -->
+
     <nav
       class="w-full fixed top-0 left-0 px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 bg-opacity-80 h-16 backdrop-blur-sm"
     >
@@ -298,12 +311,12 @@
 
     <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
       <h4
-        class="mb-2 text-lg font-semibold text-center text-gray-300 dark:text-gray-700"
+        class="mb-2 text-lg font-semibold text-center text-gray-600 dark:text-gray-700"
       >
         Introduction
       </h4>
       <h2
-        class="font-mono text-5xl text-center text-gray-300 dark:text-gray-700"
+        class="font-mono text-5xl text-center text-gray-700 dark:text-gray-700"
       >
         About Me
       </h2>
@@ -396,7 +409,7 @@
             </li>
           </ul>
 
-          <h4 class="my-6 font-semibold text-gray-400 dark:text-white/80">
+          <h4 class="my-6 font-semibold text-gray-500 dark:text-white/80">
             Tools & Technologies
           </h4>
           <ul class="flex flex-wrap items-center gap-3 sm:gap-5">
@@ -459,14 +472,16 @@
     </div>
 
     <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 class="mb-2 text-lg font-medium text-center">What I Offer</h4>
+      <h4 class="mb-2 text-lg font-medium text-center text-gray-600">
+        What I Offer
+      </h4>
       <h2
-        class="max-w-2xl mx-auto mt-5 mb-6 font-serif text-3xl font-semibold text-center"
+        class="max-w-2xl mx-auto mt-5 mb-6 font-serif text-3xl font-semibold text-center text-gray-700"
       >
         My Services
       </h2>
       <p
-        class="max-w-2xl mx-auto mb-10 text-center text-gray-500 dark:text-gray-300"
+        class="max-w-2xl mx-auto mb-10 text-center text-gray-600 dark:text-gray-300"
       >
         I am a full Stack Developer.
       </p>
@@ -482,10 +497,10 @@
               class="w-10 mb-4"
             />
           </figure>
-          <h3 class="font-serif text-lg text-gray-600 dark:text-white">
+          <h3 class="font-serif text-lg text-gray-700 dark:text-white">
             Web Design
           </h3>
-          <p class="text-sm leading-5 text-gray-500 dark:text-gray-300">
+          <p class="text-sm leading-5 text-gray-600 dark:text-gray-300">
             Web development is the process of building, programming, and
             designing websites.
           </p>
@@ -508,10 +523,10 @@
               class="w-10 mb-4"
             />
           </figure>
-          <h3 class="font-serif text-lg text-gray-600 dark:text-white">
+          <h3 class="font-serif text-lg text-gray-700 dark:text-white">
             Mobile App
           </h3>
-          <p class="text-sm leading-5 text-gray-500 dark:text-gray-300">
+          <p class="text-sm leading-5 text-gray-600 dark:text-gray-300">
             Mobile app development involves creating software applications for
             smartphones and tablets.
           </p>
@@ -528,10 +543,10 @@
           class="border border-gray-400 rounded-lg p-8 transition-all duration-500 hover:-translate-y-1 hover:bg-purple-50 hover:border-r-[3px] hover:border-black dark:hover:bg-darkHover dark:hover:shadow-lg"
         >
           <img src="/new/UX.png" alt="UX Design Icon" class="w-10 mb-4" />
-          <h3 class="font-serif text-lg text-gray-600 dark:text-white">
+          <h3 class="font-serif text-lg text-gray-700 dark:text-white">
             UX Design
           </h3>
-          <p class="text-sm leading-5 text-gray-500 dark:text-gray-300">
+          <p class="text-sm leading-5 text-gray-600 dark:text-gray-300">
             UX design focuses on improving user experience through intuitive and
             engaging interfaces.
           </p>
@@ -548,14 +563,14 @@
     </div>
 
     <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 class="mb-2 text-lg text-center text-gray-300 dark:text-white">
+      <h4 class="mb-2 text-lg text-center text-gray-600 dark:text-white">
         My Portfolio
       </h4>
-      <h2 class="text-5xl text-center text-gray-300 dark:text-white">
+      <h2 class="text-5xl text-center text-gray-700 dark:text-white">
         My Latest Work
       </h2>
       <p
-        class="max-w-2xl mx-auto mt-5 mb-12 text-center text-gray-500 dark:text-gray-300"
+        class="max-w-2xl mx-auto mt-5 mb-12 text-center text-gray-600 dark:text-gray-300"
       >
         Welcome to my portfolio! Explore a collection of projects showcasing my
         expertise in front-end and full-stack development.
@@ -570,8 +585,8 @@
             class="absolute flex items-center justify-between w-10/12 px-5 py-3 duration-500 -translate-x-1/2 bg-white rounded-md bottom-5 left-1/2 group-hover:bottom-7"
           >
             <div>
-              <h2 class="font-semibold">Frontend Project</h2>
-              <p class="text-sm text-gray-700">Web Design/App Developer</p>
+              <h2 class="font-semibold text-gray-700">Frontend Project</h2>
+              <p class="text-sm text-gray-600">Web Design/App Developer</p>
             </div>
             <div
               class="flex items-center justify-center transition border border-black rounded-full shadow-md w-9 aspect-square group-hover:bg-lime-300"
@@ -589,8 +604,8 @@
             class="absolute flex items-center justify-between w-10/12 px-5 py-3 duration-500 -translate-x-1/2 bg-white rounded-md bottom-5 left-1/2 group-hover:bottom-7"
           >
             <div>
-              <h2 class="font-semibold">Backend Project</h2>
-              <p class="text-sm text-gray-700">Web Design/App Developer</p>
+              <h2 class="font-semibold text-gray-700">Backend Project</h2>
+              <p class="text-sm text-gray-600">Web Design/App Developer</p>
             </div>
             <div
               class="flex items-center justify-center transition border border-black rounded-full shadow-md w-9 aspect-square group-hover:bg-lime-300"
@@ -608,8 +623,8 @@
             class="absolute flex items-center justify-between w-10/12 px-5 py-3 duration-500 -translate-x-1/2 bg-white rounded-md bottom-5 left-1/2 group-hover:bottom-7"
           >
             <div>
-              <h2 class="font-semibold">UI/UX Designing</h2>
-              <p class="text-sm text-gray-700">UI/UX Design</p>
+              <h2 class="font-semibold text-gray-700">UI/UX Designing</h2>
+              <p class="text-sm text-gray-600">UI/UX Design</p>
             </div>
             <div
               class="flex items-center justify-center transition border border-black rounded-full shadow-md w-9 aspect-square group-hover:bg-lime-300"
@@ -622,7 +637,7 @@
 
       <a
         href="#"
-        class="flex items-center justify-center gap-2 px-10 py-3 mx-auto my-10 text-gray-500 duration-500 bg-white border rounded-full border-gray-00 w-max hover:bg-purple-100 dark:text-white dark:border-white dark:hover:bg-darkHover"
+        class="flex items-center justify-center gap-2 px-10 py-3 mx-auto my-10 text-gray-600 duration-500 bg-white border rounded-full border-gray-00 w-max hover:bg-purple-100 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >
         Show More
         <img src="arrow.jpg" alt="Expand" class="w-4 dark:hidden" />
@@ -631,16 +646,16 @@
     </div>
 
     <div id="contact" class="w-full px-[12%] py-16 scroll-mt-20">
-      <h4 class="text-lg text-center text-gray-400 dark:text-gray-300">
+      <h4 class="text-lg text-center text-gray-500 dark:text-gray-300">
         Connect with me
       </h4>
       <h2
-        class="text-5xl font-semibold text-center text-gray-500 dark:text-white"
+        class="text-5xl font-semibold text-center text-gray-700 dark:text-white"
       >
         Get in Touch
       </h2>
       <p
-        class="max-w-2xl mx-auto mt-4 mb-12 text-center text-gray-500 dark:text-gray-500"
+        class="max-w-2xl mx-auto mt-4 mb-12 text-center text-gray-600 dark:text-gray-500"
       >
         I'd love to hear from you! If you have any questions, comments, or
         feedback, please use the form below.
